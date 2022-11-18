@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -6,7 +7,7 @@ public class Main {
     @Override
     public void putToCache(PutRecordsRequest putRecordsRequest){
         ....
-        if (dataTmpFile == null || !dataTmpFile.exists()){
+        if (!dataTmpFile.exists()){
             try {
                 dataTmpFile.createNewFile();
             } catch (IOException e) {

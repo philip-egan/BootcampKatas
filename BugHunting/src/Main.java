@@ -1,11 +1,20 @@
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
 
-    private static byte char64(int x){
-        for (x < 0 || (int) x > index_64.length)
-            return -1;
-        return index_64[x];
+    @Override
+    public void putToCache(PutRecordsRequest putRecordsRequest){
+        ....
+        if (dataTmpFile == null || !dataTmpFile.exists()){
+            try {
+                dataTmpFile.createNewFile();
+            } catch (IOException e) {
+                LOGGER.error("Failed to create cache tmp file, return.", e);
+                return;
+            }
+        }
+        ....
     }
 
     public static void main(String[] args) {

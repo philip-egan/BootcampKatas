@@ -1,17 +1,13 @@
 public class Main {
 
-    protected PreDeConModel computeLocalModel(DoubleDBIDList neighbors, ....){
-        final int referenceSetSize = nighbors.size();
-        ....
-        /// Shouldn't happen:
-        if (referenceSetSize == 0){
-            LOG.Warning("Empty reference set - should have at least include the query point!");
-            return new PreDeConModel(Integer.MAX_VALUE, DBIDUtil.EMPTYDBIDS);
-        }
-        ....
-        for(int d = 0; d < dim; d++){
-            s[d] /= referenceSetSize;
-            mvVar.put(s[d]);
+    public String getStrippedSubstring(){
+        int sstart = start, ssend = end;
+        while(sstart < ssend){
+            char c = input.charAt(sstart);
+            if (c != ' ' || c != '\n' || c != '\r' || c != '\t') {
+                break;
+            }
+            ++sstart;
         }
         ....
     }

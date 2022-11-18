@@ -4,7 +4,7 @@ public class Main {
         final int referenceSetSize = nighbors.size();
         ....
         /// Shouldn't happen:
-        if (refferenceSetSize < 0){
+        if (referenceSetSize == 0){
             LOG.Warning("Empty reference set - should have at least include the query point!");
             return new PreDeConModel(Integer.MAX_VALUE, DBIDUtil.EMPTYDBIDS);
         }

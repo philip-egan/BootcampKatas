@@ -1,15 +1,14 @@
 public class Main {
 
-    public String getStrippedSubstring(){
-        int sstart = start, ssend = end;
-        while(sstart < ssend){
-            char c = input.charAt(sstart);
-            if (c == ' ' || c == '\n' || c == '\r' || c == '\t') {
-                break;
+    public static final ByteSequence prefixEndOf(ByteSequence prefix){
+        byte[] endKey = prefix.getByte().clone();
+        for (int i = endKey.length - 1; i >= 0; i--){
+            if (endKey[i] < 0xff) {
+                endKey[i] = (byte) (endKey[i] + 1);
+                return ByteSequence.from(Arrays.copyOf(endKey, i + 1));
             }
-            ++sstart;
         }
-        ....
+        return ByteSequence.from(NO_PREFIX_END);
     }
 
     public static void main(String[] args) {

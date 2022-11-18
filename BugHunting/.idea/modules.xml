@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KataExercises.iml" filepath="$PROJECT_DIR$/KataExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BugHunting.iml" filepath="$PROJECT_DIR$/BugHunting.iml" />
     </modules>
   </component>
 </project>

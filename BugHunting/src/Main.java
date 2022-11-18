@@ -14,7 +14,7 @@ public class Main {
                 stateSize == that.stateSize &&
                 duration == that.duration &&
                 alignmentBuffer == that.alignmentBuffer &&
-                processedData == processedData &&
+                processedData == that.processedData &&
                 persistentData == that.persistentData &&
                 numSubtasks == that.numSubtasks &&
                 numAckSubtasks = that.numAckSubtasks &&

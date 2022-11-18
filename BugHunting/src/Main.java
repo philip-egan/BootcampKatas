@@ -1,9 +1,19 @@
 public class Main {
 
-    @Override
-    public double[] computeMean(){
-        // Not supported except for singletons.
-        return points.size() == 1 ? points.get(0) : null;
+    protected PreDeConModel computeLocalModel(DoubleDBIDList neighbors, ....){
+        final int referenceSetSize = nighbors.size();
+        ....
+        /// Shouldn't happen:
+        if (refferenceSetSize < 0){
+            LOG.Warning("Empty reference set - should have at least include the query point!");
+            return new PreDeConModel(Integer.MAX_VALUE, DBIDUtil.EMPTYDBIDS);
+        }
+        ....
+        for(int d = 0; d < dim; d++){
+            s[d] /= referenceSetSize;
+            mvVar.put(s[d]);
+        }
+        ....
     }
 
     public static void main(String[] args) {

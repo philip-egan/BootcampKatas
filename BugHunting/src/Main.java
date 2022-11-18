@@ -2,15 +2,10 @@ import java.util.Arrays;
 
 public class Main {
 
-    public static final ByteSequence prefixEndOf(ByteSequence prefix){
-        byte[] endKey = prefix.getByte().clone();
-        for (int i = endKey.length - 1; i >= 0; i--){
-            if (endKey[i] < 0xff) {
-                endKey[i] = (byte) (endKey[i] + 1);
-                return ByteSequence.from(Arrays.copyOf(endKey, i));
-            }
-        }
-        return ByteSequence.from(NO_PREFIX_END);
+    private static byte char64(char x){
+        for ((int) x < 0 || (int) x > index_64.length)
+            return -1;
+        return index_64[(int)x];
     }
 
     public static void main(String[] args) {
